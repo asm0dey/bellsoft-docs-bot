@@ -1,13 +1,3 @@
 ###
 GET http://localhost:8080/search?
     q=What is CRaC? What is CDS? How to use them with Spring?
-
-<> 2024-07-01T184306.200.txt
-<> 2024-07-01T184128.500.json
-<> 2024-07-01T183335.500.json
-<> 2024-07-01T181431.200.txt
-<> 2024-07-01T181322.200.txt
-<> 2024-07-01T181220.200.txt
-<> 2024-07-01T180400.200.txt
-<> 2024-07-01T174541.200.txt
-

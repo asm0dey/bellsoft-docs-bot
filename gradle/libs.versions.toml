@@ -2,15 +2,11 @@
 
 [plugins]
 
-org-springframework-boot = { id = "org.springframework.boot", version = "3.3.1" }
-
-io-spring-dependency-management = { id = "io.spring.dependency-management", version = "1.1.5" }
-
-org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-
-org-jetbrains-kotlin-plugin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
-
-org-jetbrains-kotlin-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+spring-boot = { id = "org.springframework.boot", version = "3.3.1" }
+spring-dependency-management = { id = "io.spring.dependency-management", version = "1.1.5" }
 
 [versions]
 
@@ -27,41 +23,22 @@ ktor = "2.3.12"
 [libraries]
 
 jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin" }
-
-spring-ai-openai-spring-boot-starter = { module = "org.springframework.ai:spring-ai-openai-spring-boot-starter" }
-
-spring-ai-chroma-store-spring-boot-starter = { module = "org.springframework.ai:spring-ai-chroma-store-spring-boot-starter" }
-
-kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect" }
-
-spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
-
-kotlin-scripting-compiler-embeddable = { group = "org.jetbrains.kotlin", name = "kotlin-scripting-compiler-embeddable", version.ref = "kotlin" }
-
-kotlin-allopen-compiler-plugin-embeddable = { group = "org.jetbrains.kotlin", name = "kotlin-allopen-compiler-plugin-embeddable", version.ref = "kotlin" }
-
-spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
-
-kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5" }
-
 junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
-
-spring-ai-pgvector-store-spring-boot-starter = { module = "org.springframework.ai:spring-ai-pgvector-store-spring-boot-starter" }
-
-kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
-
-kotlinx-coroutines-reactor = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-reactor", version.ref = "kotlinx-coroutines" }
-
-kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
-
-ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
-
-ktor-client-java = { group = "io.ktor", name = "ktor-client-java", version.ref = "ktor" }
-
-ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
-
-ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
-
+kotlin-allopen-compiler-plugin-embeddable = { group = "org.jetbrains.kotlin", name = "kotlin-allopen-compiler-plugin-embeddable", version.ref = "kotlin" }
 kotlin-build-tools-impl = { module = "org.jetbrains.kotlin:kotlin-build-tools-impl" }
-
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect" }
+kotlin-scripting-compiler-embeddable = { group = "org.jetbrains.kotlin", name = "kotlin-scripting-compiler-embeddable", version.ref = "kotlin" }
 kotlin-serialization-compiler-plugin-embeddable = { group = "org.jetbrains.kotlin", name = "kotlin-serialization-compiler-plugin-embeddable", version.ref = "kotlin" }
+kotlin-test-junit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-reactor = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-reactor", version.ref = "kotlinx-coroutines" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-java = { group = "io.ktor", name = "ktor-client-java", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+spring-ai-chroma-store-spring-boot-starter = { module = "org.springframework.ai:spring-ai-chroma-store-spring-boot-starter" }
+spring-ai-openai-spring-boot-starter = { module = "org.springframework.ai:spring-ai-openai-spring-boot-starter" }
+spring-ai-pgvector-store-spring-boot-starter = { module = "org.springframework.ai:spring-ai-pgvector-store-spring-boot-starter" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
