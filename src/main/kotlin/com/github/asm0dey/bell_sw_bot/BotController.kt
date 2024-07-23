@@ -70,7 +70,7 @@ Use the following information to answer the question:
         val responses: UnstructuredResponses = unstructuredClient.req(
             file = file,
             combineUnderNChars = 500,
-            maxCharacters = 8192,
+            maxCharacters = 8191,
             includeOrigElements = false,
             chunkingStrategy = "basic",
         )
