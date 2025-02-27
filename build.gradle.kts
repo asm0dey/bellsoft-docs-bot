@@ -20,7 +20,7 @@ repositories {
     maven { url = uri("https://repo.spring.io/milestone") }
 }
 
-extra["springAiVersion"] = "1.0.0-M1"
+extra["springAiVersion"] = "1.0.0-M6"
 
 dependencies {
     implementation(libs.jackson.module.kotlin)
