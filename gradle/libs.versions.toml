@@ -10,7 +10,7 @@ spring-dependency-management = { id = "io.spring.dependency-management", version
 
 [versions]
 
-kotlin = "2.0.0"
+kotlin = "2.1.10"
 ##  ⬆ = "2.0.10-RC"
 ##  ⬆ = "2.0.20-Beta1"
 ##  ⬆ = "2.0.20-Beta2"
