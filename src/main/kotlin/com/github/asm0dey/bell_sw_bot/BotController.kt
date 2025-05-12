@@ -1,14 +1,18 @@
 package com.github.asm0dey.bell_sw_bot
 
 import io.ktor.client.call.*
+import org.apache.james.mime4j.parser.ContentHandler
 import org.springframework.ai.chat.client.ChatClient
 import org.springframework.ai.chat.messages.UserMessage
 import org.springframework.ai.chat.model.ChatModel
 import org.springframework.ai.chat.prompt.Prompt
 import org.springframework.ai.chat.prompt.PromptTemplate
 import org.springframework.ai.chat.prompt.SystemPromptTemplate
+import org.springframework.ai.reader.ExtractedTextFormatter
+import org.springframework.ai.reader.tika.TikaDocumentReader
 import org.springframework.ai.vectorstore.SearchRequest
 import org.springframework.ai.vectorstore.VectorStore
+import org.springframework.core.io.InputStreamResource
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
@@ -23,13 +27,13 @@ class BotController(val vectorStore: VectorStore, chatModel: ChatModel, val unst
 
 
     @GetMapping("/search")
-    fun query(@RequestParam q: String): String {
-        val query = SearchRequest.query(q).withTopK(3)
+    fun query(@RequestParam q: String): String? {
+        val query = SearchRequest.builder().query(q).topK(3).build()
         val docs = vectorStore.similaritySearch(query)
-        val information = docs.joinToString("\n---||---\n") {
+        val information = docs?.joinToString("\n---||---\n") {
             """TITLE: ${it.metadata["filename"]}
             |BODY:
-            |${it.content}
+            |${it.text}
         """.trimMargin()
         }
         val systemPromptTemplate = SystemPromptTemplate(
@@ -77,6 +81,7 @@ Use the following information to answer the question:
             .body()
 
         val docs = responses.map(::UnstructuredResponseDocumentAdapter)
+//        val docs = TikaDocumentReader(InputStreamResource(file.inputStream)).read()
         vectorStore.add(docs)
         return ResponseEntity.of(Optional.of(Unit))
     }

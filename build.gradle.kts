@@ -17,10 +17,9 @@ java {
 
 repositories {
     mavenCentral()
-    maven { url = uri("https://repo.spring.io/milestone") }
 }
 
-extra["springAiVersion"] = "1.0.0-M1"
+extra["springAiVersion"] = "1.0.0-M8"
 
 dependencies {
     implementation(libs.jackson.module.kotlin)
@@ -34,6 +33,7 @@ dependencies {
     implementation(libs.ktor.serialization.kotlinx.json)
     implementation(libs.spring.ai.openai.spring.boot.starter)
     implementation(libs.spring.ai.pgvector.store.spring.boot.starter)
+    implementation(libs.spring.ai.tika)
     implementation(libs.spring.boot.starter.web)
     testImplementation(libs.kotlin.test.junit5)
     testImplementation(libs.spring.boot.starter.test)

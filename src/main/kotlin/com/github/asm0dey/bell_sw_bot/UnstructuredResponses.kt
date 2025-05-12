@@ -55,6 +55,9 @@ data class Metadata(
 
     @SerialName("is_continuation")
     val isContinuation: Boolean? = null,
+
+    @SerialName("text_as_html")
+    val textAsHtml: String? = null,
 ) {
     @Suppress("UNCHECKED_CAST")
     fun asMap(): Map<String, Any> = mapOf(
