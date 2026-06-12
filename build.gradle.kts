@@ -19,7 +19,7 @@ repositories {
     mavenCentral()
 }
 
-extra["springAiVersion"] = "1.0.0-M8"
+extra["springAiVersion"] = "1.1.8"
 
 dependencies {
     implementation(libs.jackson.module.kotlin)
